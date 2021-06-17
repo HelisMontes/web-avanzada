@@ -1,0 +1,822 @@
+@font-face {
+  font-family: "TrebuchetMS";
+  src: url(./fonts/TrebuchetMS.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "BebasNeue";
+  src: url(./fonts/BebasNeue.otf);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "WebsymbolsRegular";
+  src: url('./fonts/websymbols-regular-webfont.eot');
+  src: url('./fonts/websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('./fonts/websymbols-regular-webfont.woff') format('woff'),
+       url('./fonts/websymbols-regular-webfont.ttf ') format('truetype'),
+       url('./fonts/websymbols-regular-webfont.svg#WebSymbols') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+*{
+	list-style: none;
+	margin:0px;
+	padding:0px;
+	text-decoration: none;
+}
+[class*="icon"]{
+  font-family: 'WebsymbolsRegular';
+}
+.gear{
+  font-family: 'WebsymbolsRegular';
+}
+body{
+  background-image: url('./img/pattern.png');
+}
+.wrap{
+  margin: 0px auto;
+  width: 100%;
+}
+.container, .info{
+  clear: both;
+  display: block;
+  height: auto;
+  margin: 10px auto;
+  padding: 10px;
+  width: 98.5%;
+}
+
+#header{
+  background-color: black;
+  color: white;
+  font-family: "BebasNeue";
+  height: 70px;
+  width: 100%;
+}
+.logo{
+  background-color: #37bcf9;
+  cursor: pointer;
+  float: left;
+  height: 55px;
+  margin-left: 20px;
+  margin-top: 8px;
+  overflow: hidden;
+  transition: background .3s;
+  text-align: center;
+  width: 200px;
+}
+.logo:hover{
+  background-color: #ccc;
+  color: #000000;
+}
+.logo .gear{
+ display: block;
+ float: left;
+ font-size: 30px;
+ margin-left: 20px;
+ margin-top: 8px;
+ animation-name: rotate-gear;
+ animation-duration: 3s;
+ animation-iteration-count: infinite;
+ animation-timing-function: linear;
+}
+.logo:hover .gear{
+  animation: from-below .5s linear;
+}
+@keyframes rotate-gear{
+  from{
+    transform: rotateZ(0deg);
+  }
+  to{
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes from-below{
+  0%{
+    transform: translateY(0%);
+  }
+  50%{
+    transform: translateY(200%);
+  }
+  100%{
+    transform: translateY(0%);
+  }
+}
+.logo h3{
+  display: block;
+  float: right;
+  font-size: 40px;
+  letter-spacing: 5px;
+  margin-top: 5px;
+  transition: all .3s;
+  margin-right: 45px;
+}
+.logo:hover h3{
+  animation: from-right .3s linear;
+}
+@keyframes from-right{
+  from{
+    transform: translateX(200%);
+  }
+  to{
+    transform: translateX(0%);
+  }
+}
+#menu{
+  display: block;
+  float: right;
+  height: 70px;
+  background-color: transparent;
+  margin-right: 5%;
+}
+#menu ul li {
+  font-size: 24px;
+  display: inline-block;
+  margin: 0px 20px;
+  line-height: 70px;
+}
+#menu ul li a{
+  color: white;
+  display: block;
+  letter-spacing: 1px;
+  transition: all .3s;
+}
+#menu ul li a:hover{
+  color: #37bcf9;
+  transform: scale(1.1, 1.1);
+}
+.banner{
+  animation: back-banner 10s linear;
+  background-image: url('./img/bakbaner.png');
+  background-position: -240px -200px;
+  border: 10px solid white;
+  box-shadow: 0px 0px 2px gray;
+  margin: 20px auto;
+  height: 100px;
+  width: 95%;
+}
+@keyframes back-banner{
+  from{
+    background-position: 0px 0px;
+  }
+  to{
+    background-position: -240px -200px;
+  }
+}
+.banner h1{
+  display: block;
+  margin: 27px auto;
+  color: white;
+  font-family: "BebasNeue";
+  font-size: 40px;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.cards{
+  display: block;
+  height: auto;
+  margin: 0px auto;
+  padding: 10px 0px;
+  width: 97%;
+}
+.cards::after{
+  clear: both;
+  content:"";
+  color: transparent;
+  display: block;
+}
+.card:first-child{
+  margin-left:1.9%;
+}
+.card{
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px gray;
+  cursor: pointer;
+  display: block;
+  float: left;
+  height: auto;
+  margin-right:1%;
+  overflow: hidden;
+  padding: 20px 15px;
+  position: relative;
+  transition: transform .2s ease;
+  width: 16%;
+}
+.card:hover{
+  transform: scale(1.02, 1.02);
+  box-shadow: 0px 0px 10px gray;
+}
+
+.card .icon{
+  display: block;
+  font-size: 50px;
+  margin: 15px auto;
+  text-align: center;
+}
+.card .category{
+  text-align: center;
+  font-family: 'TrebuchetMS';
+  font-size: 18px;
+  color: #05577e;
+  margin: 20px auto;
+}
+.card .description{
+  text-align: justify;
+  font-family: 'TrebuchetMS';
+  font-size: 14px;
+}
+.container::after{
+  clear: both;
+  content:"";
+  color: transparent;
+  display: block;
+}
+.left{
+  float: left;
+  height: auto;
+  font-family: "TrebuchetMS";
+  width: 26%;
+}
+aside h3{
+  background: url("./img/pxgray.png"), white;
+  box-shadow: 0px 1px 0px #393d3f, 
+              1px 2px 0px #393d3f, 
+              2px 3px 0px #393d3f, 
+              3px 4px 0px #393d3f;
+  display: block;
+  font-family: "BebasNeue";
+  font-size: 30px;
+  font-weight: normal;
+  height: 45px;
+  letter-spacing: 2px;
+  line-height: 50px;
+  margin: 30px 0px 15px 15px;
+  padding-left: 15px;
+  width: auto;
+}
+
+.left h3:first-child{
+  margin-top: 0px;
+}
+.search{
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px #ccc inset;
+  height: 30px;
+  margin: 10px auto;
+  margin-left: 30px;
+  width: 85%;
+}
+.left input[type="text"]{
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  color: gray;
+  font-size: 14px;
+  height: 30px;
+  outline:none;
+  padding-left: 10px;
+  width: 83%;
+  transition: .3s;
+}
+.left input[type="text"]:focus{
+  color: rgb(39, 39, 39);
+}
+.left input[type="button"]{
+  background-color: transparent;
+  border:none;
+  cursor: pointer;
+  font-size: 16px;
+  height: 30px;
+  border-left: 1px solid #ccc;
+  color: #555;
+  padding: 5px;
+}
+.aside-box{
+  background: white;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3), 
+              2px 2px 2px rgba(0, 0, 0, 0.3), 
+              3px 3px 2px rgba(0, 0, 0, 0.3), 
+              -1px -1px 2px rgba(0, 0, 0, 0.3); 
+  height: auto;
+  margin: 0px auto;
+  margin-left: 30px;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  padding: 20px 10px;
+  width: 80%;
+}
+.login input[type="email"],
+.login input[type="password"]{
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px #ccc inset;
+  display: block;
+  font-size: 15px;
+  height: 30px;
+  margin: 0px auto;
+  margin-bottom: 15px;
+  outline: none;
+  padding-left: 30px;
+  width: 85%;
+}
+.login input[type="email"]:focus,
+.login input[type="password"]:focus{
+  box-shadow: 0px 0px 5px grey inset;
+  color: #555;
+}
+.login #user,
+.login #password{
+  display: block;
+  font-size: 17px;
+  margin-left: 10px;
+  margin-top: 5px;
+  position: absolute;
+} 
+.login #password{
+  font-size: 18px;
+  margin-left: 15px;
+  margin-top: 6px;
+}
+
+.login input[type="submit"],
+.articles button{
+  display: block;
+  background-color: rgb(39, 134, 223);
+  border: 2px solid rgba(11, 102, 187, 0.85);
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  font-family: "TrebuchetMS";
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: 25px auto;
+  padding: 10px 20px;
+  transition: all .5s ease;
+}
+
+.login input[type="submit"]:hover,
+.articles button:hover{
+  background-color: rgba(11, 102, 187, 0.85);
+  border: 2px solid white;
+  box-shadow: 0px 0px 1px white inset,
+              0px 0px 2px white inset;
+}
+
+.login a{
+  display: block;
+  color: black;
+  cursor: pointer;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.login a:hover{
+  text-decoration: underline;
+}
+
+.redes{
+  padding: 10px 10px;
+}
+.redes .overlay{
+  background-color: grey;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  margin-left: 70px;
+  margin-top: -49px;
+  text-align: center;
+  transform: translateX(-80%);
+  transition: 1s ease;
+  opacity: 0;
+  padding: 5px;
+  position: absolute;
+  width: 150px;
+}
+.redes a{
+  color: #232424;
+  display: block;
+  font-size: 35px;
+  margin-bottom: 15px;
+  margin-left: 15px;
+}
+.redes div:hover .overlay{
+  transform: translateX(0%);
+  opacity: 1;
+}
+.articles{
+  float: left;
+  font-family: "TrebuchetMS";
+  height: auto;
+  margin-left: 70px;
+  width: 67%;
+}
+.articles h2{
+  background-image: url('./img/pxgray.png');
+  box-shadow: 0px 1px 0px #393d3f, 
+              1px 2px 0px #393d3f, 
+              2px 3px 0px #393d3f, 
+              3px 4px 0px #393d3f;
+  display: block;
+  height: 60px;
+  font-size: 30px;
+  letter-spacing: 2px;
+  line-height: 65px;
+  text-align: center;
+  margin-bottom: 40px;
+  width: 100%;
+}
+.articles article{
+  background-color: white;
+  border-radius: 2px;
+  box-shadow: 0px 0px 4px gray;
+  height: auto;
+  margin: 30px 15px;
+  padding: 0px 0px 10px 10px;
+}
+.articles article .data{
+  background-color: #232424;
+  border-radius: 0px 2px 0px 5px;
+  color: white;
+  display: block;
+  float: right;
+  font-size: 13px;
+  height: 25px;
+  line-height: 25px;
+  padding: 5px;
+}
+.articles article .data span{
+  margin-left: 7px;
+}
+article h4{
+  clear: both;
+}
+article h4 a{
+  color: #05577e;
+  cursor: default;
+}
+.articles article p{
+  text-align: justify;
+  font-size: 14px;
+  margin: 10px;
+}
+
+.articles article p a{
+  color: #05577e;
+}
+
+.articles button{
+  font-size: 25px;
+  margin-top: 50px;
+  width: 80%;
+}
+
+footer{
+  background-color: black;
+  clear: both;
+  color: white;
+  display: block;
+  font-family: "BebasNeue";
+  letter-spacing: 2px;
+  height: auto;
+  width: 100%;
+}
+footer h5{
+  background: url('./img/pxgray.png'), white;
+  border-radius: 5px;
+  color: #000000;
+  display: block;
+  font-size: 35px;
+  height: 45px;
+  line-height: 50px;
+  margin: 20px auto;
+  margin-bottom: 20px;
+  text-align: center;
+}
+footer .menu-footer,
+footer .localion,
+footer .information{
+  display: block;
+  float: left;
+  left: 2%;
+  margin-left: 15px;
+  padding: 10px 5px;
+  position: relative;
+  width: 30%;
+}
+footer .menu-footer li{
+  border-bottom: 1px solid white;
+  list-style: disc;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+footer .menu-footer a{
+  color: #37bcf9;
+  font-size: 25px;
+  transition: all .5s ease;
+}
+footer .menu-footer li:hover a{
+  padding-left: 40px;
+  color: white;
+}
+.localion iframe{
+  border-radius: 5px;
+  box-shadow: 0px 0px 3px grey;
+  margin-left: 20px;
+  width: 90%;
+}
+.information .tools,
+.information .browsers{
+  text-align: center;
+  margin-bottom: 30px;
+}
+.information .tools img{
+  margin-left: 5%;
+  width: 90%;
+}
+.information .browsers img{
+  margin-left: 5px;
+  width: 14%;
+  transition: all .3s ease;
+}
+.information .browsers img:hover{
+  transform: scale(1.2, 1.2);
+}
+.information p{
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+}
+footer .autor{
+  clear: both;
+  display: block;
+  padding: 5px 0px;
+  width:100%;
+}
+footer .autor p{
+  color: white;
+  font-size: 20px;
+  margin-right: 50px;
+  text-align: right;
+}
+
+/* MEDIA QUERY */
+@media (max-width: 1198px){
+  .card{
+    width: 15.8%;
+  }
+}
+@media (max-width: 1140px){
+  .left input[type="text"] {
+    width: 80%;
+  }
+}
+@media (max-width: 1113px){
+  .card{
+    height: 350px;
+    width: 15.6%;
+  }
+  .information .browsers img {
+    width: 13%
+  }
+}
+
+@media (max-width: 1040px){
+  .card{
+    height: 350px;
+    width: 15.4%;
+  }
+  .card .category {
+    font-size: 17px;
+  }
+  .card .description {
+    font-size: 13px;
+  }
+  .articles {
+    width: 66%;
+  }
+}
+@media (max-width: 975px){
+  .card{
+    height: 350px;
+    width: 15.2%;
+  }
+  .articles {
+    width: 65%;
+  }
+  footer .menu-footer,
+  footer .localion,
+  footer .information{
+    left: 1%;
+  }
+  .left input[type="text"],
+  .login input[type="email"],
+  .login input[type="password"] {
+    width: 77%;
+  }
+}
+
+@media (max-width: 920px){
+  .card{
+    height: 350px;
+    width: 15%;
+  }
+  .card .category {
+    font-size: 16px;
+  }
+  .card .description {
+    font-size: 13px;
+  }
+  .articles {
+    width: 64%;
+  }
+  footer .menu-footer,
+  footer .localion,
+  footer .information{
+    left: 0%;
+  }
+  .aside-box {
+    width: 75%;
+  }
+}
+@media (max-width: 868px){
+  .card {
+    height: 350px;
+    width: 14.8%;
+  }
+  .card .icon {
+    display: block;
+    font-size: 40px;
+    margin: 10px auto;
+  }
+  .card .category {
+    font-size: 15px;
+    margin: 10px auto;
+  }
+  .left input[type="text"] {
+    width: 70%;
+  }
+}
+@media (max-width: 822px){
+  .card{
+    height: 380px;
+    width: 14.6%;
+  }
+  .card .category {
+    font-size: 15px;
+  }
+  .articles {
+    width: 62%;
+  }
+  footer .menu-footer,
+  footer .localion,
+  footer .information{
+    left: 0%;
+  }
+  .information .browsers img {
+    width: 12%;
+  }
+  aside h3 {
+    font-size: 24px
+  }
+  .aside-box {
+    width: 70%;
+  }
+}
+
+@media (max-width: 781px){
+  .card:first-child{
+    margin-left: 1.5%;
+  }
+  .card{
+    height: 380px;
+    width: 16%;
+    margin-right:1.5%;
+    height: 150px;
+    padding: 5px;
+  }
+  .card .icon {
+    margin-top: 15px;
+  }
+  .card .description {
+    display: none;
+  }
+
+  footer .menu-footer,
+  footer .localion,
+  footer .information{
+    width: 60%;
+    margin-left: 18%;
+  }
+  .left,
+  .articles{
+    width: 80%;
+    margin-left: 8%;
+    margin-top: 30px;
+  }
+  .left{
+    margin-bottom: 30px;
+  }
+  .search {
+    width: 90%;
+  }
+  .left input[type="text"] {
+    width: 85%;
+  }
+  .aside-box {
+    width: 85%;
+  }
+  .redes{
+    height: 50px;
+    margin-left: 30%;
+    width: 40%;
+  }
+  .redes a {
+    display: block;
+    float: left;
+    margin-left: 10%;
+  }
+  .login input[type="email"],
+  .login input[type="password"] {
+    width: 90%;
+  }
+}
+
+@media (max-width: 686px){
+  #header {
+    height: 120px;
+    padding-top: 15px;
+  }
+  .logo {
+    float: none;
+    margin: 0px auto;
+  }
+  .banner h1 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  #menu{
+    clear: both;
+    float: none;
+    margin: 0px auto;
+    width: 450px;
+  }
+  .redes a {
+    margin-left: 10%;
+  }
+  .card{
+    height: 380px;
+    width: 70%;
+    margin-left:12%;
+    height: 150px;
+    padding: 5px;
+    margin-bottom: 20px;
+  }
+  .card:first-child{
+    margin-left:12%;
+  }
+  .card:last-child{
+    margin-bottom:0px;
+  }
+}
+
+@media (max-width: 476px){
+  #header {
+    height: auto;
+    padding-top: 15px;
+    width: 100%;
+  }
+  .logo{
+    margin-bottom: 15px;
+  }
+  #menu{
+    clear: both;
+    float: none;
+    height: 100%;
+    margin: 0px auto;
+    width: 450px;
+  }
+  #menu ul li{
+    float: none;
+    display: block;
+    line-height: 30px;
+    text-align: center;
+    margin-left: 0px
+  }
+  .banner h1 {
+    font-size: 20px;
+    line-height: 40px;
+  }
+  .redes a {
+    font-size: 30px;
+    margin-left: 10px;
+  }
+}
