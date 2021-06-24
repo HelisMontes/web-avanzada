@@ -370,18 +370,17 @@ main{
   margin: 30px 15px;
   padding: 0px 0px 10px 10px;
 }
-.articles article .data{
+.articles article .date{
   background-color: #232424;
   border-radius: 0px 2px 0px 5px;
   color: white;
   display: block;
   float: right;
   font-size: 13px;
-  height: 25px;
-  line-height: 25px;
+  height: auto;
   padding: 5px;
 }
-.articles article .data span{
+.articles article .date span{
   margin-left: 7px;
 }
 article h4{
@@ -595,11 +594,9 @@ footer .autor p{
     text-align: center;
     margin: 0px;
   }
-  .articles article .data{
-    width: 228px;
-  }
-  .articles .data{
+  .articles article .date{
     margin-bottom: 20px;
+    font-size: 12px;
   }
 }
 
