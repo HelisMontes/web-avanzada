@@ -9,32 +9,30 @@
   <title>Maquetacion web avanzada</title>
 </head>
 <body>
-  <header id="header">
-    <div class="wrap">
-      <div class="logo">
-        <span class="gear">S</span>
-        <h3>BLOG</h3>
-      </div>
-      <nav id="menu">
-        <ul>
-          <li>
-            <a href="#">INICIO</a>
-          </li>
-          <li>
-            <a href="#">BLOG</a>
-          </li>
-          <li>
-            <a href="#">FORMACIÓN</a>
-          </li>
-          <li>
-            <a href="#">CONTACTO</a>
-          </li>
-        </ul>
-      </nav>
+  <header>
+    <div class="logo">
+      <span class="icon gear">S</span>
+      <h3>BLOG</h3>
     </div>
+    <nav class="menu">
+      <ul>
+        <li>
+          <a href="#">INICIO</a>
+        </li>
+        <li>
+          <a href="#">BLOG</a>
+        </li>
+        <li>
+          <a href="#">FORMACIÓN</a>
+        </li>
+        <li>
+          <a href="#">CONTACTO</a>
+        </li>
+      </ul>
+    </nav>
   </header>
-  <section class="wrap">
-    <section class="info">
+  <main>
+    <section class="content info">
       <div class="banner">
         <h1>CURSO DE MAQUETACIÓN WEB AVANZADA</h1>
       </div>
@@ -66,29 +64,27 @@
         </div>
       </div>
     </section>
-    <div class="container">
+    <section class="content container">
       <aside class="left">
         <h3>BUSCAR</h3>
         <div class="search">
-          <form>
-            <input 
-              type="text" 
-              autocomplete="enable"
-              placeholder="Buscar"
-            >
-            <input type="button" value="L" class="icon">
-          </form>
+          <input 
+            type="text" 
+            autocomplete="enable"
+            placeholder="Buscar"
+          >
+          <input type="button" value="L" class="icon">
         </div>
         <h3>LOGIN</h3>
         <div class="login aside-box">
           <form>
-            <label id="user" class="icon">U</label>
+            <label id="label-user" class="icon">U</label>
             <input 
               type="email" 
               autocomplete="enable"
               placeholder="User"
             >
-            <label id="password" class="icon">w</label>
+            <label id="label-password" class="icon">w</label>
             <input 
               type="password" 
               autocomplete="enable"
@@ -190,10 +186,9 @@
         </article>
         <button type="submit">Ir al blog</button>
       </aside>
-    </div>
-  </section>
+    </section>
+  </main>
   <footer>
-    <div class="wrap">
       <div class="container">
         <nav class="menu-footer">
           <h5>MENÚ</h5>
@@ -235,7 +230,6 @@
       <div class="autor">
         <p>Desarrollado por &copy;Helis Montes</p>
       </div>
-    </div>
   </footer>
 </body>
 </html>
